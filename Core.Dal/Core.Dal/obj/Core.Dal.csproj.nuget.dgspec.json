@@ -1,0 +1,349 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Dal\\Core.Dal\\Core.Dal.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Controller\\Core.Controller\\Core.Controller.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Controller\\Core.Controller\\Core.Controller.csproj",
+        "projectName": "Core.Controller",
+        "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Controller\\Core.Controller\\Core.Controller.csproj",
+        "packagesPath": "C:\\Users\\vinicius.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Controller\\Core.Controller\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vinicius.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://midasbrapl.metaora.com.br:81/nuget/midasbr": {},
+          "http://nuget.midassolutions.com.br:81/nuget/metaora": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\Core.Interface.Dal.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\Core.Interface.Dal.csproj"
+              },
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\Core.Model.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\Core.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Dal\\Core.Dal\\Core.Dal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Dal\\Core.Dal\\Core.Dal.csproj",
+        "projectName": "Core.Dal",
+        "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Dal\\Core.Dal\\Core.Dal.csproj",
+        "packagesPath": "C:\\Users\\vinicius.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Dal\\Core.Dal\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vinicius.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://midasbrapl.metaora.com.br:81/nuget/midasbr": {},
+          "http://nuget.midassolutions.com.br:81/nuget/metaora": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Controller\\Core.Controller\\Core.Controller.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Controller\\Core.Controller\\Core.Controller.csproj"
+              },
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\Core.Interface.Dal.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\Core.Interface.Dal.csproj"
+              },
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj"
+              },
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\Core.Model.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\Core.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\Core.Interface.Dal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\Core.Interface.Dal.csproj",
+        "projectName": "Core.Interface.Dal",
+        "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\Core.Interface.Dal.csproj",
+        "packagesPath": "C:\\Users\\vinicius.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface.Dal\\Core.Interface.Dal\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vinicius.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://midasbrapl.metaora.com.br:81/nuget/midasbr": {},
+          "http://nuget.midassolutions.com.br:81/nuget/metaora": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj",
+        "projectName": "Core.Interface",
+        "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj",
+        "packagesPath": "C:\\Users\\vinicius.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vinicius.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://midasbrapl.metaora.com.br:81/nuget/midasbr": {},
+          "http://nuget.midassolutions.com.br:81/nuget/metaora": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\Core.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\Core.Model.csproj",
+        "projectName": "Core.Model",
+        "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\Core.Model.csproj",
+        "packagesPath": "C:\\Users\\vinicius.souza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Model\\Core.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vinicius.souza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://midasbrapl.metaora.com.br:81/nuget/midasbr": {},
+          "http://nuget.midassolutions.com.br:81/nuget/metaora": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj": {
+                "projectPath": "C:\\Users\\vinicius.souza\\source\\repos\\ShopBlog\\Core.Interface\\Core.Interface\\Core.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
