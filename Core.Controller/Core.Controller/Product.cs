@@ -29,6 +29,9 @@ namespace Core.Controller
         private string MySql_Save = "";
         #endregion
 
+        /// <summary>
+        /// Returns all entries
+        /// </summary>
         public List<IProductInfo> GetAll()
         {
             List<IProductInfo> result = new List<IProductInfo>();
@@ -45,14 +48,47 @@ namespace Core.Controller
             return result;
         }
 
+        /// <summary>
+        /// Returns all entries created between the between
+        /// </summary>
         public List<IProductInfo> GetBetweenDate(DateTime startDate, DateTime endDate)
         {
-            throw new NotImplementedException();
+            List<IProductInfo> result = new List<IProductInfo>();
+
+            var comm = GetCommand(MySql_GetBetweenDate);
+            comm.Parameters.Add( new MySqlParameter( "startDate", startDate ) );
+            comm.Parameters.Add( new MySqlParameter( "endDate", endDate ) );
+
+            using (MySqlDataReader dr = comm.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    result.Add( new ProductInfo( dr.GetInt64( "pro_identi" ), dr.GetString( "pro_name" ), dr.GetDouble( "pro_price" ), dr.GetString( "pro_descri" ) ) );
+                }
+            }
+
+            return result;
         }
 
+        /// <summary>
+        /// Returns the entry with the id
+        /// </summary>
         public IProductInfo Get(int id)
         {
-            throw new NotImplementedException();
+            IProductInfo result = null;
+
+            var comm = GetCommand( MySql_Get );
+            comm.Parameters.Add( new MySqlParameter( "id", id ) );
+
+            using (MySqlDataReader dr = comm.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    result = new ProductInfo( dr.GetInt64( "pro_identi" ), dr.GetString( "pro_name" ), dr.GetDouble( "pro_price" ), dr.GetString( "pro_descri" ) );
+                }
+            }
+
+            return result;
         }
 
         public bool Save(IProductInfo product)
