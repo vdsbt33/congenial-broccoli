@@ -9,10 +9,10 @@ Core.Dal/Core.Dal/bin/Debug
 Core.Dal/Core.Dal/bin/obj
 Core.Dal/Core.Dal/bin/obj/Debug
 
-Core.Interface/.vs
-Core.Interface/Core.Interface/bin/Debug
-Core.Interface/Core.Interface/obj
-Core.Interface/Core.Interface/obj/Debug
+Core.Interface.Model/.vs
+Core.Interface.Model/Core.Interface.Model/bin/Debug
+Core.Interface.Model/Core.Interface.Model/obj
+Core.Interface.Model/Core.Interface.Model/obj/Debug
 
 Core.Interface.Dal/.vs
 Core.Interface.Dal/Core.Interface.Dal/bin/Debug

@@ -1,9 +1,0 @@
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\bin\Debug\netcoreapp2.1\Core.Interface.dll
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\bin\Debug\netcoreapp2.1\Core.Model.dll
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\obj\Debug\netcoreapp2.1\Core.Dal.csprojAssemblyReference.cache
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\obj\Debug\netcoreapp2.1\Core.Dal.csproj.CoreCompileInputs.cache
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\obj\Debug\netcoreapp2.1\Core.Dal.RazorAssemblyInfo.cache
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\obj\Debug\netcoreapp2.1\Core.Dal.RazorAssemblyInfo.cs
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\obj\Debug\netcoreapp2.1\Core.Dal.AssemblyInfoInputs.cache
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\obj\Debug\netcoreapp2.1\Core.Dal.AssemblyInfo.cs
-C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Dal\Core.Dal\obj\Debug\netcoreapp2.1\Core.Dal.RazorTargetAssemblyInfo.cache
