@@ -23,3 +23,8 @@ Core.Model/.vs
 Core.Model/Core.Model/bin/Debug
 Core.Model/Core.Model/obj
 Core.Model/Core.Model/obj/Debug
+
+Core.WebAPI/.vs
+Core.WebAPI/Core.WebAPI/bin/Debug
+Core.WebAPI/Core.WebAPI/obj
+Core.WebAPI/Core.WebAPI/obj/Debug

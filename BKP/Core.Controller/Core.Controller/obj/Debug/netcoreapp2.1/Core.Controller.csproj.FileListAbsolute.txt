@@ -1,0 +1,9 @@
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\bin\Debug\netcoreapp2.1\Core.Interface.Dal.dll
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\bin\Debug\netcoreapp2.1\Core.Interface.dll
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\obj\Debug\netcoreapp2.1\Core.Controller.csprojAssemblyReference.cache
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\obj\Debug\netcoreapp2.1\Core.Controller.csproj.CoreCompileInputs.cache
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\obj\Debug\netcoreapp2.1\Core.Controller.RazorAssemblyInfo.cache
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\obj\Debug\netcoreapp2.1\Core.Controller.RazorAssemblyInfo.cs
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\obj\Debug\netcoreapp2.1\Core.Controller.AssemblyInfoInputs.cache
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\obj\Debug\netcoreapp2.1\Core.Controller.AssemblyInfo.cs
+C:\Users\vinicius.souza\source\repos\ShopBlog\Core.Controller\Core.Controller\obj\Debug\netcoreapp2.1\Core.Controller.RazorTargetAssemblyInfo.cache
