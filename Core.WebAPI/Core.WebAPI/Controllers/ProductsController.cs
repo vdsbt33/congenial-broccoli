@@ -8,36 +8,51 @@ using System.Web.Http;
 using Core.Interface.Model.Product;
 using Core.Model.Product;
 using Core.Controller;
+using Newtonsoft.Json.Serialization;
+using System.Web.Http.Results;
 
 namespace Core.WebAPI.Controllers
 {
     public class ProductsController : ApiController
     {
-        // GET api/values
+        // GET api/products
+        [Route("api/products/get")]
+        [HttpGet]
         public List<IProductInfo> GetAll()
         {
             return Product.GetInstance().GetAll();
         }
 
-        // GET api/values/5
-        public string Get(int id)
+        // GET api/products/5
+        [Route("api/products/get")]
+        [HttpGet]
+        public List<IProductInfo> GetBetweenDate([FromUri]string startDate, [FromUri] string endDate)
         {
-            return "value";
+            return Product.GetInstance().GetBetweenDate(startDate, endDate);
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
+        // POST api/products
+        [Route("api/products/post")]
+        [HttpPost]
+        public bool Insert([FromBody] IProductInfo product)
         {
+            return Product.GetInstance().Insert(product);
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        // PUT api/products/5
+        [Route("api/products/put")]
+        [HttpPut]
+        public bool Put([FromBody] IProductInfo product)
         {
+            return Product.GetInstance().Update(product);
         }
 
-        // DELETE api/values/5
-        public void Delete(int id)
+        // DELETE api/products/5
+        [Route("api/products/delete")]
+        [HttpDelete]
+        public bool Delete(int id)
         {
+            return Product.GetInstance().Delete(id);
         }
     }
 }
