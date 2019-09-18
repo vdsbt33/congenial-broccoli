@@ -40,10 +40,7 @@ namespace Core.Controller
         {
             List<IProductInfo> result = new List<IProductInfo>();
 
-            var comm = GetCommand("create table shp_produc ( pro_identi bigint not null, pro_name varchar(255) not null, pro_price double, pro_descri varchar(5000), pro_crdate datetime not null, pro_eddate datetime, primary key (pro_identi) ); ");
-            comm.Connection.Open();
-            comm.ExecuteNonQuery();
-            CloseCommand();
+            var comm = GetCommand(Sql_GetAll);
 
             comm.Connection.Open();
             using (SqlDataReader dr = comm.ExecuteReader())

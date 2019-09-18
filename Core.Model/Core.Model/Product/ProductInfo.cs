@@ -6,7 +6,7 @@ using Core.Interface.Model.Product;
 
 namespace Core.Model.Product
 {
-    public class ProductInfo : IProductInfo
+    public class ProductInfo : IProductInfo, IBaseInfo
     {
         public long Id { get; set; }
         public string Name { get; set; }
