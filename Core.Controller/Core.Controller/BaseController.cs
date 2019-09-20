@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+//using System.Data.SqlClient;
 
 namespace Core.Controller
 {
     public class BaseController
     {
-        private SqlConnection conn;
-        private SqlCommand comm;
+        private MySqlConnection conn;
+        private MySqlCommand comm;
 
-        public SqlCommand GetCommand()
+        public MySqlCommand GetCommand()
         {
             if (conn == null)
             {
-                conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["CURR"].ConnectionString);
-                comm = new SqlCommand("", conn);
+                conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["CURR"].ConnectionString);
+                comm = new MySqlCommand("", conn);
             }
             return comm;
         }
-        public SqlCommand GetCommand(string sql)
+        public MySqlCommand GetCommand(string sql)
         {
             if (conn == null)
             {
-                conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["CURR"].ConnectionString);
-                comm = new SqlCommand(sql, conn);
+                conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["CURR"].ConnectionString);
+                comm = new MySqlCommand(sql, conn);
             }
             return comm;
         }

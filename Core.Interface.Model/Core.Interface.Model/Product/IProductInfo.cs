@@ -11,6 +11,7 @@ namespace Core.Interface.Model.Product
         double Price { get; set; }
         string Description { get; set; }
         DateTime CreatedDate { get; set; }
-        DateTime EditedDate { get; set; }
+        DateTime? EditedDate { get; set; }
+        bool Active { get; set; }
     }
 }

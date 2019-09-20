@@ -34,7 +34,7 @@ namespace Core.WebAPI.Controllers
         // POST api/products
         [Route("api/products/post")]
         [HttpPost]
-        public bool Insert([FromBody] IProductInfo product)
+        public bool Insert(ProductInfo product)
         {
             return Product.GetInstance().Insert(product);
         }
@@ -42,7 +42,7 @@ namespace Core.WebAPI.Controllers
         // PUT api/products/5
         [Route("api/products/put")]
         [HttpPut]
-        public bool Put([FromBody] IProductInfo product)
+        public bool Put(ProductInfo product)
         {
             return Product.GetInstance().Update(product);
         }

@@ -14,5 +14,11 @@ namespace Core.WebAPI.Controllers
 
             return View();
         }
+
+        public void ProductPost()
+        {
+            ProductsController p = new ProductsController();
+            p.Insert(new Model.Product.ProductInfo("C# Product", 12.99, "This is an api"));
+        }
     }
 }

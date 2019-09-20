@@ -8,8 +8,8 @@ using Core.Interface.Dal;
 using Core.Interface.Model.Product;
 using Core.Model.Product;
 
-//using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+//using System.Data.SqlClient;
 
 namespace Core.Controller
 {
@@ -28,9 +28,9 @@ namespace Core.Controller
         private string Sql_GetBetweenDate = "select * from shp_produc where pro_crdate between @startDate and @endDate";
         private string Sql_Get = "select * from shp_produc where pro_identi = @id";
 
-        private string Sql_Insert = "insert into shp_produc ( pro_name, pro_price, pro_descri, pro_crdate, pro_eddate ) values ( @name, @price, @descri, @crdate, @eddate )";
+        private string Sql_Insert = "insert into shp_produc ( pro_prname, pro_pprice, pro_descri, pro_crdate, pro_eddate ) values ( @name, @price, @descri, @crdate, @eddate )";
         private string Sql_Delete = "delete from shp_produc where pro_identi = @id";
-        private string Sql_Update = "update shp_produc set pro_name = @name, pro_price = @price, pro_descri = @descri, pro_eddate = @eddate where pro_identi = @id";
+        private string Sql_Update = "update shp_produc set pro_prname = @name, pro_pprice = @price, pro_descri = @descri, pro_eddate = @eddate where pro_identi = @id";
         #endregion
 
         /// <summary>
@@ -43,15 +43,21 @@ namespace Core.Controller
             var comm = GetCommand(Sql_GetAll);
 
             comm.Connection.Open();
-            using (SqlDataReader dr = comm.ExecuteReader())
+            try
             {
-                while (dr.Read())
+                using (MySqlDataReader dr = comm.ExecuteReader())
                 {
-                    result.Add(new ProductInfo(dr.GetInt64(0), dr.GetString(1), dr.GetDouble(2), dr.GetString(3), dr.GetDateTime(4), dr.GetDateTime(5)));
+                    while (dr.Read())
+                    {
+                        result.Add(new ProductInfo(dr.GetInt64(0), dr.GetString(1), dr.GetDouble(2), dr.GetString(3), dr.GetDateTime(4), dr.GetDateTime(5), dr.GetBoolean(6)));
+                    }
                 }
             }
+            finally
+            {
+                CloseCommand();
+            }
 
-            CloseCommand();
             return result;
         }
 
@@ -73,15 +79,15 @@ namespace Core.Controller
             List<IProductInfo> result = new List<IProductInfo>();
 
             var comm = GetCommand(Sql_GetBetweenDate);
-            comm.Parameters.Add(new SqlParameter("startDate", startDate));
-            comm.Parameters.Add(new SqlParameter("endDate", endDate));
+            comm.Parameters.Add(new MySqlParameter("startDate", startDate));
+            comm.Parameters.Add(new MySqlParameter("endDate", endDate));
 
             comm.Connection.Open();
-            using (SqlDataReader dr = comm.ExecuteReader())
+            using (MySqlDataReader dr = comm.ExecuteReader())
             {
                 while (dr.Read())
                 {
-                    result.Add(new ProductInfo(dr.GetInt64(0), dr.GetString(1), dr.GetDouble(2), dr.GetString(3), dr.GetDateTime(4), dr.GetDateTime(5)));
+                    result.Add(new ProductInfo(dr.GetInt64(0), dr.GetString(1), dr.GetDouble(2), dr.GetString(3), dr.GetDateTime(4), dr.GetDateTime(5), dr.GetBoolean(6)));
                 }
             }
 
@@ -97,14 +103,14 @@ namespace Core.Controller
             IProductInfo result = null;
 
             var comm = GetCommand(Sql_Get);
-            comm.Parameters.Add(new SqlParameter("id", id));
+            comm.Parameters.Add(new MySqlParameter("id", id));
 
             comm.Connection.Open();
-            using (SqlDataReader dr = comm.ExecuteReader())
+            using (MySqlDataReader dr = comm.ExecuteReader())
             {
                 while (dr.Read())
                 {
-                    result = new ProductInfo(dr.GetInt64(0), dr.GetString(1), dr.GetDouble(2), dr.GetString(3), dr.GetDateTime(4), dr.GetDateTime(5));
+                    result = new ProductInfo(dr.GetInt64(0), dr.GetString(1), dr.GetDouble(2), dr.GetString(3), dr.GetDateTime(4), dr.GetDateTime(5), dr.GetBoolean(6));
                 }
             }
 
@@ -120,16 +126,22 @@ namespace Core.Controller
             product.CreatedDate = DateTime.Now;
 
             var comm = GetCommand(Sql_Insert);
-            comm.Parameters.Add(new SqlParameter("name", product.Name));
-            comm.Parameters.Add(new SqlParameter("price", product.Price));
-            comm.Parameters.Add(new SqlParameter("descri", product.Description));
-            comm.Parameters.Add(new SqlParameter("crdate", product.CreatedDate));
-            comm.Parameters.Add(new SqlParameter("eddate", product.EditedDate));
+            comm.Parameters.Add(new MySqlParameter("name", product.Name));
+            comm.Parameters.Add(new MySqlParameter("price", product.Price));
+            comm.Parameters.Add(new MySqlParameter("descri", product.Description));
+            comm.Parameters.Add(new MySqlParameter("crdate", product.CreatedDate));
+            comm.Parameters.Add(new MySqlParameter("eddate", product.EditedDate));
 
             comm.Connection.Open();
-            product.Id = comm.ExecuteNonQuery();
+            try
+            {
+                product.Id = comm.ExecuteNonQuery();
+            }
+            finally
+            {
+                CloseCommand();
+            }
 
-            CloseCommand();
             return product.Id > 0;
         }
 
@@ -139,7 +151,7 @@ namespace Core.Controller
         public bool Delete(long id)
         {
             var comm = GetCommand(Sql_Delete);
-            comm.Parameters.Add(new SqlParameter("id", id));
+            comm.Parameters.Add(new MySqlParameter("id", id));
 
             comm.Connection.Open();
             var result = comm.ExecuteNonQuery() > 0;
@@ -154,7 +166,7 @@ namespace Core.Controller
         public bool Delete(IProductInfo product)
         {
             var comm = GetCommand(Sql_Delete);
-            comm.Parameters.Add(new SqlParameter("id", product.Id));
+            comm.Parameters.Add(new MySqlParameter("id", product.Id));
 
             comm.Connection.Open();
             var result = comm.ExecuteNonQuery() > 0;
@@ -171,11 +183,11 @@ namespace Core.Controller
             product.EditedDate = DateTime.Now;
             
             var comm = GetCommand(Sql_Update);
-            comm.Parameters.Add(new SqlParameter("name", product.Name));
-            comm.Parameters.Add(new SqlParameter("price", product.Price));
-            comm.Parameters.Add(new SqlParameter("descri", product.Description));
-            comm.Parameters.Add(new SqlParameter("eddate", product.EditedDate));
-            comm.Parameters.Add(new SqlParameter("id", product.Id));
+            comm.Parameters.Add(new MySqlParameter("name", product.Name));
+            comm.Parameters.Add(new MySqlParameter("price", product.Price));
+            comm.Parameters.Add(new MySqlParameter("descri", product.Description));
+            comm.Parameters.Add(new MySqlParameter("eddate", product.EditedDate));
+            comm.Parameters.Add(new MySqlParameter("id", product.Id));
 
             comm.Connection.Open();
             var result = comm.ExecuteNonQuery() > 0;

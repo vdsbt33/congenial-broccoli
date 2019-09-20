@@ -6,6 +6,6 @@ namespace Core.Interface.Model.Product
     {
         long Id { get; set; }
         DateTime CreatedDate { get; set; }
-        DateTime EditedDate { get; set; }
+        DateTime? EditedDate { get; set; }
     }
 }
