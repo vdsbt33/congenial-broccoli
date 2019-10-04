@@ -1,0 +1,18 @@
+.food-type {
+    display: inline-block;
+    font-size: 16px;
+    text-align: right;
+    width: 100%;
+    color: bisque;
+    text-shadow: 1.2px 1.2px 0 #00000010;
+    align-items: flex-end
+}
+
+.action-delete {
+    color: #17a2b8;
+    transition: 0.09s ease-in-out;
+}
+
+.action-delete:hover {
+    color: #dc3545;
+}

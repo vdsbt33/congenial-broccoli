@@ -1,0 +1,48 @@
+﻿@page
+@model CartModel
+@{
+}
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Produto</th>
+            <th>Preço (unidade)</th>
+            <th>Quantidade</th>
+            <th>Preço total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Pão francês</td>
+            <td>R$ 0,87</td>
+            <td>6</td>
+            <td>R$ 5,22</td>
+            <td>
+                <a href="#" class="action-delete"><i class="fas fa-trash"></i></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Bolo de chocolate 500g</td>
+            <td>R$ 17,99</td>
+            <td>1</td>
+            <td>R$ 17,99</td>
+            <td>
+                <a href="#" class="action-delete"><i class="fas fa-trash"></i></a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right"><b>Total:</b></td>
+            <td colspan="2">R$ 23,21</td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-right" style="margin-right: 24px;">
+    <button type="button" class="btn btn-success">
+        <i class="fas fa-shopping-cart" style="margin-right: 2px; text-shadow: -1.6px 1.6px 0px #00000033;"></i>
+        Finalizar
+    </button>
+</div>
